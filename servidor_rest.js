@@ -1,12 +1,14 @@
 var express = require("express");
 var app = express();
-var conexion = require("./conexion_mysql.js")
-
 var datosServidor= require("./datos.js");
 
 var jwt = require("jwt-simple");
 var clave = "miSecretoMasOscuro"
+const { createClient } =require ('@supabase/supabase-js');
 
+const supabaseUrl= 'https://ozyuhnxhjvlpsemkdxwa.supabase.co';
+const supabaseKey= 'sb_publishable_iahRQ_vvzRdeZUram-RIng_lzm7STHo';
+const supabase= createClient(supabaseUrl,supabaseKey);
 /*
 var gestores=datosServidor.ges;
 var sanitarios=datosServidor.san;
