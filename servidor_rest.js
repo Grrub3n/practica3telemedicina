@@ -19,6 +19,8 @@ var recursos=datosServidor.rec;
 var reservas=datosServidor.resr;
 var resenyas=datosServidor.resy;
 */
+app.use("/appCliente", express.static("cliente_rest")); 
+app.use(express.json()); 
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, function(){
