@@ -19,8 +19,10 @@ var recursos=datosServidor.rec;
 var reservas=datosServidor.resr;
 var resenyas=datosServidor.resy;
 */
-app.listen(3000, function(){
-    console.log("Servidor escuchando en http://localhost:3000")
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, function(){
+    console.log("Servidor escuchando en el puerto " + PORT);
 });
 
 // GET
